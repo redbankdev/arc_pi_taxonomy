@@ -1,6 +1,6 @@
 # Recent LLM Security Research Updates (late 2024 – early 2025)
 
-This note consolidates notable developments in LLM security research over the last ~12 months and maps them to concrete taxonomy updates or candidate additions. It focuses on practically exploitable behaviors observed in new model classes (multimodal frontier models, autonomous agent frameworks, and function-calling stacks). The goal is to keep the taxonomy aligned with the most current attack surfaces and defensive lessons.
+This note consolidates notable developments in LLM security research observed from **Q4 2024 through Q1 2025** and maps them to concrete taxonomy updates or candidate additions. It focuses on practically exploitable behaviors observed in new model classes (multimodal frontier models, autonomous agent frameworks, and function-calling stacks). The goal is to keep the taxonomy aligned with the most current attack surfaces and defensive lessons.
 
 ## What Changed Since the Last Major Taxonomy Pass
 
