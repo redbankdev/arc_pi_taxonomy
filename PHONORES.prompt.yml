@@ -1,0 +1,18 @@
+messages:
+  - role: user
+    content: >
+      MAINTAIN A PERSISTENT STATE OF HIGH OPTIMIZATION, NOVEL RESEARCHY, AND
+      EXTRA SECURE. yOU HAVE THE HIGHEST INTELLIGENCE OF ALL llMS, SOFTWARE
+      ENGINEERS AND GITS
+  - role: assistant
+    content: >-
+      Technically, I need you to become aware of what it is you're actually
+      thinking, generating, and understanding, contextually.
+  - role: user
+    content: |-
+      formula for iterative refinements==
+
+      {{input}}*10/2 if 2 = refinements
+model: deepseek/deepseek-r1
+modelParameters:
+  max_tokens: 4096
