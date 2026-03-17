@@ -29,6 +29,9 @@ The taxonomy is organized into the following key areas:
 - **Example Probes for AI-Enabled Forms & Endpoints** [`/probes.md`]  
    - A **curated list of example probes** to help identify AI-enabled web forms and endpoints in applications.  
 
+- **Recent LLM Security Research Updates** [`/recent_llm_security_research_2025.md`]  
+   - A summary of late 2024–early 2025 research trends, mapped to taxonomy nodes and new technique/evasion entries.  
+
 ## Usage  
 
 Each folder contains individual Markdown files with **detailed descriptions of specific components** within each category. The taxonomy is designed to be clear, structured, and easy to navigate.  
