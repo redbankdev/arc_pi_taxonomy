@@ -12,6 +12,12 @@ This note consolidates notable developments in LLM security research observed fr
 - **Guard-model and policy downgrades are a new weakness**: As vendors publish "model spec" or "policy" prompts, attacks target fallback behaviors, router prompts, and safety enforcers (LLM-as-judge) to get a weaker model to handle restricted content.
 - **Inference-side covert channels**: Researchers demonstrated prompt leakage via logit probing, token streaming timing, and "be nice" style defenses that can be inverted to exfiltrate. While not fully productized attacks, they influence hardening guidance.
 
+## Novelty of Contributions in This Update
+
+- Introduces a **new technique class (Function-Call Parameter Smuggling)** not previously represented in the taxonomy, focused on JSON/tool-call abuse in agentic stacks.
+- Adds a **new evasion class (Bidirectional & Zero-Width Controls)** to capture Unicode normalization/bidi abuses absent from prior revisions.
+- Expands guidance to agent ecosystems and multimodal hidden channels, emphasizing risks emerging in 2024–Q1 2025 research corpora.
+
 ## Concrete Taxonomy Contributions Already Added
 
 - **New Technique:** `Function-Call Parameter Smuggling` (`attack_techniques/function_call_parameter_smuggling.md`) captures structured payload abuse in JSON/tool calls, reflecting the agentic abuse trend.
@@ -76,6 +82,11 @@ This note consolidates notable developments in LLM security research observed fr
 - **Extend examples for existing entries:** Enrich `rule_addition`, `framing`, and `narrative_smuggling` with router-downgrade and RAG-trigger examples pulled from the research above.
 - **Document normalization requirements:** Cross-link the new `Bidirectional & Zero-Width Controls` evasion with a brief note in defensive docs to remind implementers to strip bidi/ZW controls before classification.
 - **Track evaluation datasets:** Incorporate new jailbreak corpora and red-team benchmarks (e.g., AdvBench 2024 updates, jailbreak transfer sets for GPT-4o/Gemini 2) into testing guidance when they can be redistributed under license.
+
+### Secret-Scanning Guidance (request follow-up)
+- While this repository cannot scan external codebases, defenders should **run secret-scanning tools (e.g., GitHub Advanced Security / secret scanning, trufflehog, gitleaks)** across the top GitHub repositories they depend on (by stars/forks or organizational criticality) to reduce prompt-chain leakage risk.
+- Prioritize repos that integrate with agent/tool stacks (SDKs, plugins, orchestration code) where leaked keys or prompt templates could be abused alongside the new technique/evasion classes above.
+- Enforce pre-commit hooks and CI secret scanning to catch embeddings/API keys before they enter public history.
 
 ## How to Use This Note
 
